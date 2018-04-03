@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour {
-    MusicPlayer instance;
+    private static MusicPlayer instance = null;
 
-	// Use this for initialization
-	void Start () {
-        // If the instance is not null, then we 
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        } else
+    private void Awake()
+    {
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-	}
-	
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
