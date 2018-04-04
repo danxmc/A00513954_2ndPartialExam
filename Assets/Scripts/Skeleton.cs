@@ -31,14 +31,17 @@ public class Skeleton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        // If the sensor is touching the player
         if (box.IsTouching(playerBox))
         {
+            // Attack
             moving = false;
             animator.SetBool("Attacking", true);
             animator.SetBool("Walking", false);
         }
         else
         {
+            // Don't attack
             moving = true;
             animator.SetBool("Attacking", false);
             animator.SetBool("Walking", true);
@@ -59,14 +62,19 @@ public class Skeleton : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Flips the sprite to the opposite side
+    /// </summary>
     void Flip()
     {
-        //Flips sprite
         Vector3 scale = transform.localScale;
         scale.x = walk.x * 5;
         transform.localScale = scale;
     }
 
+    /// <summary>
+    /// Transforms the position of the enemy so it moves left
+    /// </summary>
     void MoveLeft()
     {
         movingLeft = true;
@@ -75,6 +83,9 @@ public class Skeleton : MonoBehaviour {
         transform.position += walk * speed * Time.deltaTime;
     }
     
+    /// <summary>
+    /// Transforms the position of the enemy so it moves right
+    /// </summary>
     void MoveRight()
     {
         movingLeft = false;
@@ -83,6 +94,10 @@ public class Skeleton : MonoBehaviour {
         transform.position += walk * speed * Time.deltaTime;
     }
 
+    /// <summary>
+    /// When it touches the wall object, invert the movingLeft boolean value
+    /// </summary>
+    /// <param name="collision">The collision with an object</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Wall")

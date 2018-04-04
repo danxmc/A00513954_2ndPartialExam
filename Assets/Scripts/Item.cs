@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class Item : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
+    /// <summary>
+    /// When the item touches the player, the item will destroy itself, after .25 seconds
+    /// </summary>
+    /// <param name="collision">The collision of an object</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")

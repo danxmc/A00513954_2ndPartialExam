@@ -493,9 +493,37 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.7624993
       objectReference: {fileID: 0}
+    - target: {fileID: 61637396011120984, guid: 73d1fbbc6af0fc84893e221430ba5f32,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73d1fbbc6af0fc84893e221430ba5f32, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &424500442 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1588143380831122, guid: 73d1fbbc6af0fc84893e221430ba5f32,
+    type: 2}
+  m_PrefabInternal: {fileID: 424500441}
+--- !u!251 &424500443
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 424500442}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!4 &480403073 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4898152927201664, guid: 78b18ea47233dcd4b903ee824c755bd0,
@@ -1481,9 +1509,37 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.7625
       objectReference: {fileID: 0}
+    - target: {fileID: 61637396011120984, guid: 73d1fbbc6af0fc84893e221430ba5f32,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73d1fbbc6af0fc84893e221430ba5f32, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1896765984 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1588143380831122, guid: 73d1fbbc6af0fc84893e221430ba5f32,
+    type: 2}
+  m_PrefabInternal: {fileID: 1896765983}
+--- !u!251 &1896765985
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1896765984}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1001 &1932458310
 Prefab:
   m_ObjectHideFlags: 0

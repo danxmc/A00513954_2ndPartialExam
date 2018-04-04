@@ -6,7 +6,7 @@ public class Cam : MonoBehaviour {
     public Transform player;
     public Vector3 offset;
 	
-	// Update is called once per frame
+	// Transform the position of the camera in the x axis to follow the player
 	void Update () {
         transform.position = new Vector3(player.position.x + offset.x,offset.y, offset.z);
 	}

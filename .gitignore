@@ -32,3 +32,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Extra
+ClassDiagram1.cd
+ClassDiagram1.png

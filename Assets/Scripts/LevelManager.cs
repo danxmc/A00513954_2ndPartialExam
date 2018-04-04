@@ -4,32 +4,29 @@ using System.Collections;
 
 public class LevelManager : MonoBehaviour {
 
+    /// <summary>
+    /// Calls for a scene with the SceneManager by it's name
+    /// </summary>
+    /// <param name="name">The name of the scene</param>
 	public void LoadLevel(string name)
     {
-		//Debug.Log ("New Level load: " + name);
-		//	Application.LoadLevel (name);    -- This method was deprecated a long time ago
 		SceneManager.LoadScene(name);
 	}
 
+    /// <summary>
+    /// Quits the game
+    /// </summary>
 	public void EndGame()
     {
 		//Debug.Log ("Quit requested");
 		Application.Quit ();
 	}
 
-    // Added these functions to our previous LevelManager script.
+    /// <summary>
+    /// Loads the next scene in the build settings order
+    /// </summary>
     public void LoadNextLevel()
     {
-        // Load the next scene in the build order
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
-    /*
-    public void BrickDestroyed()
-    {
-        if (Brick.breakableCount <= 0)
-        {
-            LoadNextLevel();
-        }
-    }*/
 }

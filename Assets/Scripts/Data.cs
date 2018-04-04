@@ -9,29 +9,29 @@ public class Data : MonoBehaviour {
     public int stage;
 
     protected LevelManager levelManager;
+
 	// Use this for initialization
 	void Start () {
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         score = 0;
         stage = 1;
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
+    /// <summary>
+    /// Creates solely one instance of the Data object
+    /// </summary>
     private void Awake()
     {
+        // Instantiates the Data object
         if (instance == null)
         {
             instance = this;
         }
+        // Else destroy it
         else if(instance != null)
         {
             Destroy(gameObject);
         }
-
         DontDestroyOnLoad(gameObject);
     }
 }
