@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Skeleton : MonoBehaviour {
     public int speed;
-    //public int direction = -1;
     public GameObject sensor;
     public GameObject player;
 
