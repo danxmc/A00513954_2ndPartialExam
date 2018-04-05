@@ -18,7 +18,6 @@ public class Cat : MonoBehaviour {
     protected Animator animator;
     protected Data data;
 
-    private Vector2 move;
     private bool grounded;
     private int direction, playOnce;
 
@@ -168,7 +167,7 @@ public class Cat : MonoBehaviour {
             rigidBody.AddForce(dir * force);
         }
 
-        // If the player is touching the floor set the boolean for gorunded to true
+        // If the player is touching the floor set the boolean for grounded to true
         if (collision.gameObject.tag == "Floor")
         {
             grounded = true;
@@ -176,7 +175,7 @@ public class Cat : MonoBehaviour {
     }
 
     /// <summary>
-    /// If the player is not touching the floor set the boolean for gorunded to false
+    /// If the player is not touching the floor set the boolean for grounded to false
     /// </summary>
     /// <param name="collision">A collision with an object</param>
     private void OnCollisionExit2D(Collision2D collision)
